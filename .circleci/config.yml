@@ -19,9 +19,9 @@ jobs:
         key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
     - run: mvn dependency:go-offline
     - save_cache:
-        path:
+        paths:
           - ~/.m2
-          - key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+        key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
     - run: mvn package
     - store_test_results:
         path: target/surefire-reports
@@ -45,9 +45,9 @@ jobs:
         key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
     - run: mvn dependency:go-offline
     - save_cache:
-        path:
+        paths:
           - ~/.m2
-          - key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+        key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
     - run: mvn package
     - store_test_results:
         path: target/surefire-reports
@@ -72,9 +72,9 @@ jobs:
         key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
     - run: mvn dependency:go-offline
     - save_cache:
-        path:
+        paths:
           - ~/.m2
-          - key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+        key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
     - run: mvn package
     - store_test_results:
         path: target/surefire-reports
